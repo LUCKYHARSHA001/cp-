@@ -57,4 +57,16 @@ the 2 pillars of encapsulation:
  What is the default access specifier in a C++ class? * A: private.  
  Encapsulation is also known as...? * A: Data Hiding.  
  How do we achieve encapsulation? * A: By making data members private and providing public getter/setter methods.  
- Difference between Class and Struct in C++? * A: In a class, members are private by default. In a struct, members are public by default.   
+ Difference between Class and Struct in C++? * A: In a class, members are private by default. In a struct, members are public by default.  
+ ---
+ 2. Abstraction:  
+ Abstraction is the process of showing only the essential features of an object to the outside world while hiding the internal implementation details.
+
+
+3. Inheritance:  
+inheritance is a core pillar of Object-Oriented Programming (OOP) that allows a new class (the derived class) to inherit the properties and behaviors (data members and member functions) of an existing class (the base class).  
+Think of it as a "is-a" relationship.
+ - Base Class (Parent): The class whose features are inherited.
+ - Derived Class (Child): The class that inherits from the base class.
+ - Reusability: It allows you to reuse code without rewriting it, making the system easier to maintain.
+ 
