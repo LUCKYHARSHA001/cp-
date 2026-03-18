@@ -44,4 +44,18 @@ Polymorphism allows one interface to be used for different types of actions. It 
 5. Left Shift (<<):The Bitwise Left Shift (<<) operator shifts the bits of a number to the left by a specified number of positions, filling the vacated right-hand slots with 0s.one-line rule:Shifting a number left by $n$ positions is mathematically equivalent to multiplying that number by $2^n$.
 6. Right Shift (>>):The Bitwise Right Shift (>>) operator moves the bits of a number to the right by a specified number of positions, discarding the bits that "fall off" the right edge.one-line rule:Shifting a non-negative number right by $n$ positions is mathematically equivalent to performing integer division of that number by $2^n$.
 
-## 
+## Smart Pointers:  
+1. Unique Pointer:  
+A Unique Pointer (std::unique_ptr) is a smart pointer that owns and manages another object through a pointer and disposes of that object when the unique_ptr goes out of scope.The "unique" part is literal: no two unique_ptr instances can manage the same object. This provides a strict exclusive ownership model.  
+
+2. auto_ptr:  
+The biggest issue with auto_ptr was its unusual copy semantics. When you "copied" an auto_ptr, it didn't actually make a copy; it silently transferred ownership and set the original pointer to null.If you tried to sort a vector of auto_ptr, the internal logic of the sort algorithm would "copy" elements, inadvertently nullifying them and causing the program to crash.  
+
+3. shared ptr:  
+shared_ptr allows multiple pointers to share ownership of the same object. It uses reference counting to manage memory.  
+The object is only destroyed and its memory deallocated when the last shared_ptr owning it is destroyed or reset (i.e., when the reference count hits zero).  
+
+4. Weak ptr:  
+it can look at the object and check if it still exists, but it doesn't keep the object alive. If all shared_ptr owners go away, the object is destroyed even if a weak_ptr is still pointing to it.  
+The primary reason weak_ptr exists is to solve the Circular Dependency problem. 
+If Object A has a shared_ptr to Object B, and Object B has a shared_ptr to Object A, their reference counts will never reach zero. They keep each other alive forever, causing a memory leak. By making one of those links a weak_ptr, you break the cycle.
