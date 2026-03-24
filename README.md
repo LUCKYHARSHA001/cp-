@@ -17,6 +17,7 @@
 
   ### Wild Pointer:  
   A wild pointer is a pointer that has been declared but not initialized to a specific memory address (like NULL, nullptr, or the address of a valid variable). Because it hasn't been given a safe place to point, it contains a "garbage" memory address—whatever bits happened to be left over in that specific spot of your RAM.
+  ->to prevent the wild pointer we use either nullptr or smart pointers(unique_ptr)
   #### Danger of wild pointers:  
   Think of a wild pointer like a GPS with random coordinates programmed into it. If you try to "go" to that location (dereference it)  
   1. Crash your program: If the random address belongs to the Operating System or is protected memory.  
