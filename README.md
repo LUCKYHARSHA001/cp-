@@ -54,17 +54,17 @@
   A Dangling pointer is a pointer that points to memory location that has been already deallocated  
   Trying to access a dangling pointer will leads to **Undefined Behaviour** this may lead to data corruption and security vulnebilities
 
-    #### How to prevent Dangling Pointers:
-    ->set those pointers to nullptr  
-    ->use smart pointers like new , delete , unique_ptr ,shared_ptr  
-    ->using weak_ptr  
+  #### How to prevent Dangling Pointers:
+  ->set those pointers to nullptr  
+  ->use smart pointers like new , delete , unique_ptr ,shared_ptr  
+  ->using weak_ptr  
 
-    ->Dangling vs. Wild vs. Null Pointers  
-    | pointer Type| Description|
-    |:---|:---|
-    |Dangling|Points to memory that was valid but has been deleted.|
-    |wild|A pointer that was never initialized (contains a random memory address).|
-    |NULL|Points to 0 or nullptr (explicitly points to "nothing").|
+  ->Dangling vs. Wild vs. Null Pointers  
+  | pointer Type| Description|
+  |:---|:---|
+  |Dangling|Points to memory that was valid but has been deleted.|
+  |wild|A pointer that was never initialized (contains a random memory address).|
+  |NULL|Points to 0 or nullptr (explicitly points to "nothing").|
 
 
 ---
