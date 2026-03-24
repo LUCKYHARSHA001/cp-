@@ -35,7 +35,20 @@
 
 
   ### Void Pointer:  
+  A void pointer is also known as generic pointer in this it can hold address of anytype. it  Declared using keyword **" void* "**. It is like we will point to some address saying thats someone was present there but doesnt know who it is.It can be **int , float ,char , structs, class**  
+  -> It can not be dereferenced directly  
+  -> In this pointer Arthimetic doesnt work means we cannot perform ptr++ or ptr+1 on a void pointer  
+  As we cant access the data directly we must cast it back to its original datatype and in cpp we have **static_cast**  
 
+  -> it is mainly used before cpp templates was introduced  
+  -> Functions in c like malloc return void* because they allocate a block of raw bytes.  
+  
+  -> void pointer vs Templates  
+  |Feature|void pointer(void*)|Templates|
+  |:---|:---|:---|
+  |Type Safety|Low (Manual casting required)|High (Compiler checks types)|
+  |Performance|Fast (Simple address)|Fast (Generated at compile time)|
+  |Readability|Often confusing/opaque|Clear and expressive|
 
   ### Dangling Pointer:  
 
