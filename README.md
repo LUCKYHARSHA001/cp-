@@ -54,10 +54,10 @@ the 2 pillars of encapsulation:
  1. Data Bundling: Combining data members and member functions.  
  2. Data Hiding: Using Access Specifiers to restrict direct access to the data from outside the class.
 
- What is the default access specifier in a C++ class? * A: private.  
- Encapsulation is also known as...? * A: Data Hiding.  
- How do we achieve encapsulation? * A: By making data members private and providing public getter/setter methods.  
- Difference between Class and Struct in C++? * A: In a class, members are private by default. In a struct, members are public by default.  
+  What is the default access specifier in a C++ class? * A: private.  
+  Encapsulation is also known as...? * A: Data Hiding.  
+  How do we achieve encapsulation? * A: By making data members private and providing public getter/setter methods.  
+  Difference between Class and Struct in C++? * A: In a class, members are private by default. In a struct, members are public by default.  
  ---
  2. Abstraction:  
  Abstraction is the process of showing only the essential features of an object to the outside world while hiding the internal implementation details.
