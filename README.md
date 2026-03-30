@@ -96,4 +96,20 @@ Think of it as a "is-a" relationship.
  - Base Class (Parent): The class whose features are inherited.
  - Derived Class (Child): The class that inherits from the base class.
  - Reusability: It allows you to reuse code without rewriting it, making the system easier to maintain.
- 
+##### Types of inheritance:  
+1. Single Inheritance:  
+  A subclass inherits from one single base class.  
+  ex: Dog inherits from Animal
+2. Multilevel Inheritance:  
+  A derived class acts as a base class for another class.  
+  ex: Puppy inherits from Dog, which inherits from Animal.  
+3. Multiple Inheritance:  
+  A class inherits from more than one base class.  
+  ex: A SmartPhone inherits from Camera and Phone.  
+4. Hierarchical Inheritance:  
+  Multiple classes inherit from a single base class.  
+  ex: Car and Truck both inherit from Vehicle.  
+##### Diamond Problem:  
+Case: When two classes inherit from the same base, and a fourth class inherits from both of them, you get a diamond shape.  
+problem: The bottom class gets two copies of the top-most base class’s members, causing ambiguity and memory waste.  
+solution: we use virtual keyword 
